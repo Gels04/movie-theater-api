@@ -29,6 +29,7 @@ router.get("/genre/:genre", async (req, res) => {
 //     genre: "comedy",
 // }}))
 
+//update rating of a show that has been watched- eg /shows/4/watched/:rating would update the 4th show's rating that has been watched.
 router.put("/:id/watched/:rating", async (req, res) => {
     const oneShow = await Show.findByPk(req.params.id);
     const updateShowRating = await oneShow.update({where: {
@@ -36,6 +37,11 @@ router.put("/:id/watched/:rating", async (req, res) => {
     }})
     res.json(updateShowRating);
 })
+
+//update the status of a show
+
+
+//delete a show
 
 
 module.exports = router;

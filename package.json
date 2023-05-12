@@ -4,7 +4,8 @@
   "description": "",
   "main": "db.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --watchAll",
+    "seed": "node seed.js",
     "start": "nodemon server.js"
   },
   "author": "",
@@ -16,5 +17,8 @@
     "sequelize": "^6.31.1",
     "sqlite3": "^5.1.6",
     "supertest": "^6.3.3"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
   }
 }

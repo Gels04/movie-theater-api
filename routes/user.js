@@ -10,7 +10,7 @@ router.get("/", async (req, res) => {
 
 //get one user from the database
 router.get("/:id", async (req, res) => {
-    const oneUser = await User.findOne(req.params.id);
+    const oneUser = await User.findByPk(req.params.id);
     res.json(oneUser);
 })
 
@@ -28,5 +28,6 @@ router.put("/:id/shows/:showNumber", async (req, res) => {
     res.json(updatedUserShows);
 
 })
+
 
 module.exports = router;
